@@ -16,18 +16,18 @@
  * @author Yauheni Bialkou
  */
 
-//=====================================================================[ INCLUDE ]======================================================================================================== //
+//======================================================================[ INCLUDE ]======================================================================================================== //
 
 #include "cli.h"
 #include "cli_cmd.h"
 #include <stdio.h>
 #include <string.h>
 
-//=====================================================================[ INTERNAL MACRO DEFENITIONS ]===================================================================================== //
+//======================================================================[ INTERNAL MACRO DEFENITIONS ]===================================================================================== //
 
-//=====================================================================[ INTERNAL DATA TYPES DEFINITIONS ]================================================================================ //
+//======================================================================[ INTERNAL DATA TYPES DEFINITIONS ]================================================================================ //
 
-//=====================================================================[ INTERNAL FUNCTIONS AND OBJECTS DECLARATION ]===================================================================== //
+//======================================================================[ INTERNAL FUNCTIONS AND OBJECTS DECLARATION ]===================================================================== //
 
 static Cli_s cliInstance = {0}; // Instance of CLI structure to store system state
 
@@ -104,12 +104,12 @@ static void cliSendMessage(const char *message);
  */
 int16_t CliStartup(void)
 {
-    int16_t status = 0;                  // A variable for storing the execution status
-    int32_t ioResult = 0;                // A variable for storing the result
-    int32_t rxCbStatus = ERR_NONE;       // A variable for storing the RX callback function
-    int32_t txCbStatus = ERR_NONE;       // A variable for storing the TX callback function
-    int32_t errCbStatus = ERR_NONE;      // A variable for storing the Error callback function
-    int32_t uartEnableStatus = ERR_NONE; // A variable for storing the UART enable status
+    int16_t status           = 0;           // A variable for storing the execution status
+    int32_t ioResult         = 0;           // A variable for storing the result
+    int32_t rxCbStatus       = ERR_NONE;    // A variable for storing the RX callback function
+    int32_t txCbStatus       = ERR_NONE;    // A variable for storing the TX callback function
+    int32_t errCbStatus      = ERR_NONE;    // A variable for storing the Error callback function
+    int32_t uartEnableStatus = ERR_NONE;    // A variable for storing the UART enable status
 
     do
     {
